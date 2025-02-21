@@ -7,11 +7,12 @@
 
 body {
     background-color: #ffeff2;
+    height: 100vh;
 }
 
 header {
-    top: 0;
     position: fixed;
+    top: 0;
     width: 100%;
     padding: 10px 20px;
     border-bottom: 1.5px solid #fd2401;
@@ -19,4 +20,20 @@ header {
     font-size: 2em;
     font-weight: bold;
     text-align: center;
+    z-index: 10;
+    background-color: #ffeff2;
+}
+
+.container {
+    color: #fd2401;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.col {
+    padding: .5em;
 }
