@@ -8,3 +8,15 @@
 body {
     background-color: #ffeff2;
 }
+
+header {
+    top: 0;
+    position: fixed;
+    width: 100%;
+    padding: 10px 20px;
+    border-bottom: 1.5px solid #fd2401;
+    color: #fd2401;
+    font-size: 2em;
+    font-weight: bold;
+    text-align: center;
+}
