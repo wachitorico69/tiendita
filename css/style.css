@@ -40,15 +40,17 @@ header {
 table {
     color: #fd2401;
     padding: 10px 0;
+    border-spacing: 50px 7px;
 }
 
 th {
+    padding: 0px 30px 0px 30px;
     text-align: center;
-    border-bottom: 1px solid red;
+    border-bottom: 1.5px solid red;
 }
 
 td {
-    padding: 0 1.5em;
+    text-align: center;
 }
 
 button {
