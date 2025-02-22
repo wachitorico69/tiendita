@@ -7,6 +7,9 @@
 
 body {
     background-color: #ffeff2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100vh;
 }
 
@@ -31,4 +34,18 @@ header {
 
 .col {
     padding: .5em;
+}
+
+/*ESTILOS TABLA*/
+table {
+    color: #fd2401;
+    border-radius: 5px;
+    padding: 10px 0;
+    border-spacing: 50px 7px;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+th {
+    text-align: left;
+    border-bottom: 5px solid red;
 }
