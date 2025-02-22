@@ -13,7 +13,7 @@ function renderMovies() {
             <td>${movie.producto}</td>  
             <td>${movie.precio}</td>
             <td>
-                <button onclick="deleteMovie(${index})"><img src="/media/delete.png"width="30px"></button>
+                <button onclick="deleteMovie(${index})"><img src="/media/delete.png" width="30px"></button>
             </td>
         `;
         movieTableBody.appendChild(row); //se agrega el renglón que creamos con datos a la tabla

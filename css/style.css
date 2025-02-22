@@ -29,7 +29,7 @@ header {
 
 .container {
     color: #fd2401;
-    margin-top: 100px;
+    margin-top: 80px;
 }
 
 .col {
@@ -39,13 +39,20 @@ header {
 /*ESTILOS TABLA*/
 table {
     color: #fd2401;
-    border-radius: 5px;
     padding: 10px 0;
-    border-spacing: 50px 7px;
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
 th {
-    text-align: left;
-    border-bottom: 5px solid red;
+    text-align: center;
+    border-bottom: 1px solid red;
+}
+
+td {
+    padding: 0 1.5em;
+}
+
+button {
+    background: none;
+    border: none;
+    padding: 0;
 }
