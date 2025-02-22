@@ -13,7 +13,7 @@ function renderMovies() {
             <td>${movie.producto}</td>  
             <td>${movie.precio}</td>
             <td>
-                <button onclick="deleteMovie(${index})"><img src="/media/delete.png" width="30px"></button>
+                <button onclick="eliminar(${index})"><img src="/media/delete.png" width="30px"></button>
             </td>
         `;
         movieTableBody.appendChild(row); //se agrega el renglón que creamos con datos a la tabla
@@ -30,11 +30,11 @@ function añadir(producto, precio) {
     renderMovies();
 }
 
-function deleteMovie(index) {
-    books.splice(index,1); //tabla
-    localStorage.setItem('books', JSON.stringify(books));
-    localStorage.removeItem(JSON.stringify(books[index])); //borra localstorage
-    renderBooks();
+function eliminar(index) {
+    movies.splice(index,1); //tabla
+    localStorage.setItem('movies', JSON.stringify(movies));
+    localStorage.removeItem(JSON.stringify(movies[index])); //borra localstorage
+    renderMovies();
 }
 
 //Render inicial, llama a la función anterior
