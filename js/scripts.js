@@ -29,6 +29,9 @@ function renderMovies() {
     });
     var tam = movies.length;
     document.getElementById("total").innerHTML = "Productos totales: " + tam;
+    if (total.toFixed(2) < 0) {
+        document.getElementById("pagar").innerHTML = "Total: $0.00";
+    }
     document.getElementById("pagar").innerHTML = "Total: $" + total.toFixed(2);
 }
 
@@ -53,8 +56,8 @@ function eliminar(index) {
     movies.splice(index,1); //tabla
     localStorage.setItem('movies', JSON.stringify(movies));
     localStorage.removeItem(JSON.stringify(movies[index])); //borra localstorage
+    document.getElementById("alert").innerHTML = '<div class="alert alert-warning alert-dismissible fade show" role="alert" duration=4000> <strong>Producto eliminado</strong> <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button></div>';
     renderMovies();
-    
 }
 
 //Render inicial, llama a la función anterior

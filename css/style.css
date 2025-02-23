@@ -65,3 +65,8 @@ button {
     flex-direction: row;
     gap: 5em;
 }
+
+.alert {
+    background-color: #ffeff2;
+    border: 2px solid #fd2401;
+}
