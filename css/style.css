@@ -58,3 +58,10 @@ button {
     border: none;
     padding: 0;
 }
+
+.elementos {
+    margin-top: 1.2em;
+    display: flex;
+    flex-direction: row;
+    gap: 5em;
+}

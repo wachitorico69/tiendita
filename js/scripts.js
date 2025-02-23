@@ -1,6 +1,15 @@
 //Recupera películas de localStorage o inicializa un array vacío
 let movies = JSON.parse(localStorage.getItem('movies')) || [];
 
+let cuenta = JSON.parse(localStorage.getItem('cuenta'));
+
+var total = 0;
+if(cuenta > 0) {
+    total = cuenta;
+} else {
+    total = 0;
+}
+
 const movieTableBody = document.querySelector('#movieTable tbody'); //la tabla que tenemos en html
 let editingIndex = null;
 
@@ -18,10 +27,16 @@ function renderMovies() {
         `;
         movieTableBody.appendChild(row); //se agrega el renglón que creamos con datos a la tabla
     });
+    var tam = movies.length;
+    document.getElementById("total").innerHTML = "Productos totales: " + tam;
+    document.getElementById("pagar").innerHTML = "Total: $" + total.toFixed(2);
 }
 
 function añadir(producto, precio) {
-    const newMovie =  {producto, precio};
+    total += precio;
+    localStorage.setItem('cuenta',total);
+
+    const newMovie = {producto, precio};
 
     movies.push(newMovie);
 
@@ -35,6 +50,7 @@ function eliminar(index) {
     localStorage.setItem('movies', JSON.stringify(movies));
     localStorage.removeItem(JSON.stringify(movies[index])); //borra localstorage
     renderMovies();
+    
 }
 
 //Render inicial, llama a la función anterior
