@@ -46,6 +46,10 @@ function añadir(producto, precio) {
 }
 
 function eliminar(index) {
+    let precio = movies[index].precio;
+    total -= precio;
+    localStorage.setItem('cuenta',total);
+
     movies.splice(index,1); //tabla
     localStorage.setItem('movies', JSON.stringify(movies));
     localStorage.removeItem(JSON.stringify(movies[index])); //borra localstorage
